@@ -1,0 +1,106 @@
+div#center_col {
+    width:1212px !important;
+    margin-left:170px !important;
+}
+
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > div.g > div.rc > div.s
+/*,div.s*/
+{
+    max-width:none !important;
+/*    background-color:#f6f6f6 !important;
+*/    position: relative;
+    left: 50px;
+}
+
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > div.g:hover
+{
+    background-color:#f6f6f6 !important;
+}
+
+/*hide url and cache/similar dropdown*/
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > 
+div.g >   /*regular div, no hover*/
+div.rc > div.s 
+>div>div:first-child
+{
+    background-color:#e0f0f0 !important;
+    visibility:hidden;
+    height:0;
+    position: absolute;
+/*    left: 1010px;
+    */
+    right:50px;
+    top: -20px;
+}
+
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > 
+div.g:hover >   /*hover div*/
+div.rc > div.s 
+>div>div:first-child
+{
+    background-color:#e0f0f0 !important;
+    visibility:visible;
+    height:inherit;
+}
+/* emphasise ' you have visited this page man times.... 
+and missing search terms*/
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > div.g > div.rc > div.s 
+._Tib
+{
+/*    color:red !important;
+*/
+    width: 120px;
+    min-height: 30px;
+    background: none;
+    background-color:#f6f6f6;
+    position: absolute;
+    left: -200px;
+    top: -20px;
+    font-size:smaller;
+	/*balloon:*/
+    padding: 2 8px 2 8px;
+	box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;
+	border-radius: 2px;
+}
+
+div#center_col > div#res.med > div#search > div > div#ires > div#rso > div.srg > div.g > div.rc > div.s 
+._Tib:after {
+  content: "";
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px ;
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
+  top: 8px;
+  right: -4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #f6f6f6 #f6f6f6 transparent;
+}
+
+/*hide ads*/
+li.ads-ad
+{
+    display:none;
+}
+
+#tads::after{
+    content:"show ads";
+}
+
+#tads:hover li.ads-ad
+{
+    display:inherit;
+}
+
+#tads:hover::after{
+    content:""; /* hide 'show ads' if hovering, because ads are shown when hovering*/
+}
+                                        
+
+/*this square on the right-hand side on celebs with citation from wikipedia: move to the right*/
+#rhs_block {
+    /* float: right; */
+    position: relative;
+    right: -700px;
+}
